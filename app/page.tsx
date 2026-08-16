@@ -1,13 +1,9 @@
-import { getData } from "@/lib/weatherAPI";
+import SearchBar from "@/components/SearchBar";
 
 export default async function Home() {
-  const data = await getData();
-
-  console.log(data);
-
   return (
-    <div>
-      <h1>weather app</h1>
+    <div className="flex gap-2 items-center justify-center flex-col border-gray-700 rounded-lg shadow-xl backdrop-blur-md p-5">
+      <SearchBar />
     </div>
   );
 }
