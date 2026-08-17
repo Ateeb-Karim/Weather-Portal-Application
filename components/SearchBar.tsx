@@ -2,14 +2,14 @@
 
 import { useWeather } from "@/context/WeatherContext";
 import { Search } from "lucide-react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function SearchBar() {
   const [text, setText] = useState<string>("");
 
   const { handleSearch } = useWeather();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
     handleSearch(text);
