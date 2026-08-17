@@ -18,8 +18,8 @@ import Error from "./error";
 import StateCard from "@/components/StateCard";
 
 function windDirection(deg: number) {
-  const dirs = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
-  return dirs[Math.round(deg / 45) % 8];
+  const directions = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
+  return directions[Math.round(deg / 45) % 8];
 }
 
 function formatTime(unix: number, timezoneOffsetSec: number) {
