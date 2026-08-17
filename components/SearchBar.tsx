@@ -25,7 +25,7 @@ export default function SearchBar() {
         <input
           type="text"
           placeholder="Enter city name"
-          className="flex-1 min-w-0 px-4 sm:px-6 py-3 sm:py-4 bg-transparent outline-none text-white placeholder-white/60 text-base sm:text-xl rounded-full ring-1 ring-white/40 transition-all capitalize tracking-wider focus:ring-offset-1"
+          className="flex-1 min-w-0 px-4 sm:px-6 py-1.5 sm:py-4 bg-transparent outline-none text-white placeholder-white/60 text-base sm:text-xl rounded-full ring-1 ring-white/40 transition-all capitalize tracking-wider focus:ring-offset-1"
           value={text}
           onChange={(e) => {
             setText(e.target.value);

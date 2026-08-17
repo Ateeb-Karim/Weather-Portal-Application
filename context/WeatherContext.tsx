@@ -37,7 +37,7 @@ export default function WeatherContextProvider({
       setError(null);
 
       const key = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
-      const data = await fetch(
+      const data: WeatherDataType = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${key}&units=metric`,
         {
           next: {

@@ -1,3 +1,5 @@
+// src/types/weatherTypes.ts
+
 export type WeatherCondition = {
   id: number;
   main: string;
@@ -65,4 +67,5 @@ export type WeatherDataType = {
   id: number;
   name: string;
   cod: number;
+  message?: string;
 };
