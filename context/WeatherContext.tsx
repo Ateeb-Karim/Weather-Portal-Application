@@ -38,20 +38,15 @@ export default function WeatherContextProvider({
 
       const key = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
       const data = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`,
+        `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${key}&units=metric`,
         {
-          headers: {
-            Authorization: `Bearer ${key}`,
-            Application: "application/json",
-          },
           next: {
             revalidate: 300,
           },
         },
       ).then((response) => response.json());
 
-      console.log("search handle", city, data);
-      if (data.cod !== "200") {
+      if (data.cod !== 200) {
         return setError(data.message || "something went wrong");
       }
 
